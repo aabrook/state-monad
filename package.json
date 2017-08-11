@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "aabrook at gmail",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aabrook/state-monad"
+  },
   "scripts": {
     "test": "RELEASE_ENVIRONMENT=test NODE_ENV=test mocha $(find . -not -regex '.*node_modules.*' | grep __tests__/.*-test.js)",
     "lint": "standard --verbose | snazzy"
