@@ -1,6 +1,6 @@
 {
   "name": "state-monad",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An implementation of the state monad, following fantasy-land conventions",
   "main": "index.js",
   "author": "aabrook at gmail",
