@@ -75,7 +75,7 @@ const add = (a, b) => a + b
 State
   .of(4)
   .withState(add)
-  .left(5)
+  .eval(5)
 // 9
 ```
 
