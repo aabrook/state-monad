@@ -26,6 +26,11 @@ const State = (st) => ({
     const [l] = st(ss)
     return [l, l]
   }),
+  then: (f) => State(s => {
+    const [v, ss] = st(s)
+    const res = f(v)
+    return res.runState ? res.runState(ss) : [res, ss]
+  }),
   withState: (f) => State(s => [f(...st(s)), s]),
   exec: (x) => st(x)[1],
   eval: (x) => st(x)[0],

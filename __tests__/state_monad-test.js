@@ -120,4 +120,18 @@ describe('State Monad', () => {
       [1, 4]
     )
   ))
+
+  it('should wrap a result in a State with .then, when not a state returned', () => (
+    assert.deepEqual(
+      State.of(6).then(v => v * 7).runState(6),
+      [42, 6]
+    )
+  ))
+
+  it('should run the state if a State is returned in .then', () => (
+    assert.deepEqual(
+      State.of(6).then(v => State(s => [v * 7, s * 2])).runState(6),
+      [42, 12]
+    )
+  ))
 })
